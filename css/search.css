@@ -1,0 +1,107 @@
+section{
+    padding:2rem 20%;
+}
+body{
+    background: rgb(224, 224, 198,0.6);
+}
+.products .box-container {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 2fr));
+    gap: 1.5rem;
+  }
+
+  .products .box-container .box {
+    position: relative;
+    background: #f3f3f3;
+    text-align: left;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+    border:0.1rem solid rgba(0,0,0,0.7);
+  }
+
+.products .box-container .box:hover  .icons{
+    top: 0;
+}
+
+  .products .box-container .box .icons {
+    position: absolute;
+    top: -145%;
+    left: 0;
+    height: 30rem;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(243, 243, 243, 0.8);
+    gap: 1rem;
+  }
+
+  .products .box-container .box .icons a {
+    font-size: 1.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    line-height: 2.5rem;
+    background: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    color: #817474;
+  }
+
+.products .box-container .box .icons a:hover{
+    background: var(--brown);
+    color:#000000;
+}
+
+  .products .box-container .box .img {
+    height: 15rem;
+    width: 22rem;
+    overflow: hidden;
+    text-align: center;
+  }
+  .products .box-container .box .img img {
+    height:100%;
+    width:100%;
+    object-fit: cover;
+  }
+  .products .box-container .box .content h3 {
+    font-size: 1.2rem;
+    color: #222;
+    text-align: center;
+  }
+
+  .products .box-container .box .content .price {
+    font-size: 1.2rem;
+    color: #222;
+    text-align: center;
+
+  }
+
+  .products .box-container .box .content .stars i {
+    font-size: 1rem;
+    color: var(--brown);
+    
+  } 
+  .products .box-container .box .content .stars{
+    text-align: center;
+    
+  } 
+
+
+.search-container{
+    text-align: center;
+    font-size:1.2rem ;
+}
+#search-input{
+    width: 600px; /* Đặt chiều rộng của ô nhập liệu */
+    height: 40px; /* Đặt chiều cao của ô nhập liệu */
+    font-size: 16px; /* Thay đổi kích thước chữ */
+    border: 1px solid #ccc; /* Đặt viền cho ô nhập liệu */
+
+    box-sizing: border-box; 
+}
+#search-button{
+    margin-left: 1.3rem;
+    font-size: large;
+}

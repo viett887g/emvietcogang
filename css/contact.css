@@ -1,0 +1,102 @@
+/* Thêm vào cuối tệp CSS của bạn */
+.chatbox-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chatbox-toggle {
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chatbox-toggle i {
+    font-size: 24px;
+    color: #333;
+}
+
+.chatbox {
+    display: none;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.chatbox-open {
+    display: flex;
+}
+
+.chatbox-header {
+    background-color: #ffcc00;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbox-header h3 {
+    margin: 0;
+    color: #333;
+}
+
+.chatbox-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.chatbox-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.messages {
+    padding: 10px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.message {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    max-width: 80%;
+}
+
+.chatbox-form {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chatbox-input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    border-radius: 0;
+    outline: none;
+}
+
+.chatbox-send {
+    background-color: #ffcc00;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+}

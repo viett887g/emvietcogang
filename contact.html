@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="heading">
+        <h1>Contact us</h1>
+    </div>
+    
+    <section class="contact">
+        <div class="icons-container">
+            <div class="icons">
+                <i class="fas fa-phone"></i>
+                <h3>our number</h3>
+                <p>+111-222-3333</p>
+                <p>+456-786-7890</p>
+            </div>
+            <div class="icons">
+                <i class="fas fa-envelope"></i>
+                <h3>our email</h3>
+                <p>shaikhfarhan@gmail.com</p>
+                <p>xyzemail@gmail.com</p>
+            </div>
+            <div class="icons">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>our address</h3>
+                <p>mumbai, india - 401203</p>
+            </div>
+        </div>
+    
+        <div class="row">
+            <form action="">
+                <h3>get in touch</h3>
+                <div class="inputBox">
+                    <input type="text" placeholder="enter your name" class="box">
+                    <input type="text" placeholder="enter your email" class="box">
+                </div>
+                <div class="inputBox">
+                    <input type="number" placeholder="enter your number" class="box">
+                    <input type="text" placeholder="enter your subject" class="box">
+                </div>
+                <textarea placeholder="your message" cols="30" rows="10"></textarea>
+                <input type="submit" value="send message" class="btn">
+            </form>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462560.3011806427!2d54.947543798608436!3d25.076381472700536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1642496355732!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Chatbox -->
+    <div class="chatbox-container">
+        <button class="chatbox-toggle"><i class="fas fa-comments"></i></button>
+        <div class="chatbox">
+            <div class="chatbox-header">
+                <h3>Chat with us</h3>
+                <button class="chatbox-close">&times;</button>
+            </div>
+            <div class="chatbox-content">
+                <div class="messages"></div>
+                <form class="chatbox-form">
+                    <input type="text" placeholder="Type a message" class="chatbox-input" required>
+                    <button type="submit" class="chatbox-send"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="space"></div>
+
+    <script>
+        // JavaScript for chatbox functionality
+        document.querySelector('.chatbox-toggle').addEventListener('click', function() {
+            document.querySelector('.chatbox').classList.toggle('chatbox-open');
+        });
+
+        document.querySelector('.chatbox-close').addEventListener('click', function() {
+            document.querySelector('.chatbox').classList.remove('chatbox-open');
+        });
+
+        document.querySelector('.chatbox-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const input = document.querySelector('.chatbox-input');
+            const message = input.value.trim();
+            if (message !== "") {
+                const messagesContainer = document.querySelector('.messages');
+                const newMessage = document.createElement('div');
+                newMessage.classList.add('message');
+                newMessage.textContent = message;
+                messagesContainer.appendChild(newMessage);
+                input.value = "";
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }
+        });
+    </script>
+</body>
+</html>
